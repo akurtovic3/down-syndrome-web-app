@@ -1,0 +1,165 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  height: 5vh;
+
+  @include media-breakpoint-down(md) {
+    width: 100vw;
+  }
+  box-shadow: 0 3px 6px 0 rgba($black, 0.16);
+}
+
+.fill-primary-hover {
+  &:hover {
+    path {
+      fill: $primary;
+    }
+  }
+}
+
+.stroke-primary-hover {
+  &:hover {
+    path {
+      stroke: $primary;
+    }
+  }
+}
+
+.recondition-icon {
+  &:hover {
+    g g g {
+      fill: $primary;
+    }
+  }
+}
+
+.circle-primary-hover {
+  &:hover {
+    circle {
+      stroke: $primary;
+    }
+  }
+}
+
+.stroke-primary {
+  path {
+    stroke: $primary;
+  }
+}
+
+.fill-primary {
+  path {
+    fill: $primary;
+  }
+}
+
+.avatar-hover {
+  &:hover {
+    g {
+      g {
+        fill: $primary;
+      }
+      circle {
+        stroke: $primary;
+      }
+    }
+  }
+}
+
+.avatar-selected {
+  g {
+    g {
+      fill: $primary;
+    }
+    circle {
+      stroke: $primary;
+    }
+  }
+}
+
+.navbar-brand {
+  font-weight: $navbar-brand-font-weight;
+}
+
+.nav-icon,
+.nav-flag {
+  padding: 0.1rem 0.8rem !important;
+  display: block;
+  font-size: 1.5rem;
+  color: $gray-600;
+  transition: $transition-appearance-fast;
+  line-height: 1.4;
+
+  &:after {
+    display: none !important;
+  }
+
+  &:hover,
+  &.active {
+    color: $primary;
+  }
+
+  svg,
+  .feather {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.nav-item {
+  .indicator {
+    background: $primary;
+    box-shadow: $box-shadow;
+    border-radius: 50%;
+    display: block;
+    height: 18px;
+    width: 18px;
+    padding: 1px;
+    position: absolute;
+    top: 0;
+    right: -8px;
+    text-align: center;
+    transition: top 0.1s ease-out;
+    font-size: 0.675rem;
+    color: $white;
+  }
+
+  &:hover .indicator {
+    top: -4px;
+  }
+
+  a:focus {
+    outline: 0;
+  }
+}
+
+.dropdown-item:disabled {
+  color: $light-gray;
+}
+
+@include media-breakpoint-down(xs) {
+  .navbar {
+    padding: 0.75rem;
+  }
+
+  .nav-icon {
+    padding: 0.1rem 0.75rem;
+  }
+
+  .dropdown,
+  .dropleft,
+  .dropright,
+  .dropup {
+    position: inherit;
+  }
+
+  .navbar-expand .navbar-nav .dropdown-menu-lg {
+    min-width: 100%;
+  }
+
+  .nav-item .nav-link:after {
+    display: none;
+  }
+}
+

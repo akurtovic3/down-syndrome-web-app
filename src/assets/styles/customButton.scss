@@ -1,0 +1,46 @@
+.btn-custom {
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.86px;
+    padding-inline: 30px;
+    height: 36px;
+    background-color: $white;
+    color: $primary;
+    border: 1px solid $primary;
+
+    &.filled {
+        background-color: $primary;
+        color: $white;
+        border: 1px solid $primary;
+
+        
+        &:hover  {
+            background-color: rgba($primary, 0.85);
+        }
+    }
+
+    &[disabled] {
+        background-color: $gray-500;
+        color: $white;
+        border: none;
+        opacity: 1;
+        pointer-events: none;
+    }
+
+    &.secondary {
+        background-color: $white;
+        color: $secondary;
+        border: 1px solid $secondary;
+
+        &.filled {
+            background-color: $secondary;
+            color: $white;
+            border: 1px solid $secondary;
+        }
+
+        &:hover  {
+            background-color: rgba($secondary, 0.85);
+        }
+    }
+}
